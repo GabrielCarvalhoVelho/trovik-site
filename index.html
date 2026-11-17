@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trovik | Software sob medida, automações e IA</title>
+  <meta name="description" content="Trovik desenvolve sistemas sob medida, automações e integrações com WhatsApp e inteligência artificial para pequenas e médias empresas.">
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #14171c;
+      --border: #242931;
+      --text: #e8eaed;
+      --muted: #9aa3ad;
+      --accent: #4ade80;
+      --accent-dark: #16a34a;
+      --max: 1040px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11, 13, 16, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav a.cta {
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px;
+    }
+    .nav a.cta:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero { padding-top: 112px; padding-bottom: 96px; }
+    .tag {
+      display: inline-block; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-size: 0.8rem; color: var(--accent);
+      border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 999px;
+      padding: 4px 12px; margin-bottom: 24px;
+    }
+    h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.08; letter-spacing: -0.04em; font-weight: 800; max-width: 16ch; }
+    h1 em { font-style: normal; color: var(--accent); }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 56ch; margin-top: 24px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600;
+      padding: 12px 22px; border-radius: 10px;
+    }
+    .btn-primary { background: var(--accent); color: #052e16; }
+    .btn-primary:hover { background: var(--accent-dark); color: #fff; }
+    .btn-ghost { border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--muted); }
+
+    section { padding: 80px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.9rem; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .lead { color: var(--muted); max-width: 60ch; margin-bottom: 40px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px;
+    }
+    .card .icon {
+      font-family: ui-monospace, Menlo, monospace; color: var(--accent);
+      font-size: 0.85rem; margin-bottom: 16px;
+    }
+    .card h3 { font-size: 1.15rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .card p { color: var(--muted); font-size: 0.97rem; }
+
+    .steps { list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .steps li { counter-increment: s; padding: 24px; border-left: 2px solid var(--border); }
+    .steps li::before {
+      content: "0" counter(s); display: block;
+      font-family: ui-monospace, Menlo, monospace; color: var(--accent); font-size: 0.85rem; margin-bottom: 8px;
+    }
+    .steps strong { display: block; margin-bottom: 4px; }
+    .steps span { color: var(--muted); font-size: 0.95rem; }
+
+    .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .contact a { text-decoration: none; }
+    .contact .card:hover { border-color: var(--accent); }
+    .contact .label { color: var(--muted); font-size: 0.85rem; margin-bottom: 4px; }
+    .contact .value { font-weight: 600; font-size: 1.05rem; word-break: break-word; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--muted); font-size: 0.88rem; }
+    .foot { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .foot strong { color: var(--text); }
+    .foot a { color: var(--muted); }
+    .foot a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="#" class="logo">trovik<span>.</span></a>
+      <a href="#contato" class="cta">Fale com a gente</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div class="tag">// software sob medida</div>
+      <h1>Sistemas que fazem seu negócio <em>andar sozinho</em>.</h1>
+      <p>A Trovik desenvolve sistemas web, automações e integrações com WhatsApp e inteligência artificial para pequenas e médias empresas que querem menos trabalho manual e mais controle.</p>
+      <div class="actions">
+        <a href="#contato" class="btn btn-primary">Conversar sobre um projeto</a>
+        <a href="#servicos" class="btn btn-ghost">Ver o que fazemos</a>
+      </div>
+    </div>
+
+    <section id="servicos">
+      <div class="wrap">
+        <h2>O que fazemos</h2>
+        <p class="lead">Do sistema interno ao atendimento automatizado, construímos ferramentas pensadas para a rotina real de cada empresa.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="icon">&lt;sistemas/&gt;</div>
+            <h3>Sistemas web sob medida</h3>
+            <p>Painéis de gestão, controle financeiro, relatórios e aplicações completas, do banco de dados à interface.</p>
+          </div>
+          <div class="card">
+            <div class="icon">&lt;whatsapp + ia/&gt;</div>
+            <h3>Atendimento no WhatsApp com IA</h3>
+            <p>Assistentes que respondem clientes, agendam horários e enviam lembretes pelo WhatsApp oficial, passando para um humano quando precisa.</p>
+          </div>
+          <div class="card">
+            <div class="icon">&lt;automações/&gt;</div>
+            <h3>Automações e integrações</h3>
+            <p>Conectamos os sistemas que você já usa e eliminamos tarefas repetitivas: planilhas, notificações, relatórios e fluxos entre ferramentas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como">
+      <div class="wrap">
+        <h2>Como trabalhamos</h2>
+        <p class="lead">Um processo simples e transparente, com entregas frequentes.</p>
+        <ol class="steps">
+          <li><strong>Entendimento</strong><span>Conversamos sobre o problema e a rotina do seu negócio.</span></li>
+          <li><strong>Proposta</strong><span>Escopo, prazo e investimento definidos por escrito.</span></li>
+          <li><strong>Desenvolvimento</strong><span>Entregas em etapas, com você validando cada uma.</span></li>
+          <li><strong>Suporte</strong><span>Acompanhamento e melhorias depois da entrega.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrap">
+        <h2>Contato</h2>
+        <p class="lead">Conte o que você precisa. Respondemos em até 1 dia útil.</p>
+        <div class="contact">
+          <a class="card" href="mailto:contato@trovik.com.br">
+            <div class="label">E-mail</div>
+            <div class="value">contato@trovik.com.br</div>
+          </a>
+          <a class="card" href="https://wa.me/5511914843543" target="_blank" rel="noopener">
+            <div class="label">WhatsApp / Telefone</div>
+            <div class="value">(11) 91484-3543</div>
+          </a>
+          <div class="card">
+            <div class="label">Localização</div>
+            <div class="value">São Paulo – SP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <strong>Trovik</strong> é marca de GABRIEL CARVALHO VELHO<br>
+        CNPJ 57.395.551/0001-19 · São Paulo – SP
+      </div>
+      <div>
+        <a href="privacidade.html">Política de Privacidade</a><br>
+        © 2026 Trovik
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
